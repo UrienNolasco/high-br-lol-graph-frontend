@@ -2,6 +2,7 @@ import React from "react";
 import PixelBlast from "../bits/PixelBlast";
 import { Card, CardContent, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
+import DecryptedText from "../bits/DecryptedText";
 
 const Hero = () => {
   return (
@@ -26,10 +27,16 @@ const Hero = () => {
           transparent
         />
       </div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full pointer-events-none">
-        <h1 className="text-5xl md:text-6xl font-bold text-center mb-4 select-none">
-          Domine o Meta do High-Elo Brasileiro.
-        </h1>
+      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full">
+        <DecryptedText
+          text="Customize me"
+          speed={100}
+          maxIterations={20}
+          characters="ABCD1234!?"
+          className="revealed"
+          parentClassName="all-letters pointer-events-auto"
+          encryptedClassName="encrypted"
+        />
         <p className=" text-center mb-8 select-none max-w-3xl font-thin text-2xl">
           Análise de Win Rates e Matchups de Mestre, Grão-Mestre e Desafiante do
           BR.
