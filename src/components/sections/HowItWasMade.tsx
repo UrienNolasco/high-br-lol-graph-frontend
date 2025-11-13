@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
 import PixelBlast from "../bits/PixelBlast";
 
 const HowItWasMade = () => {
   return (
-    <section id="how-it-was-made" className="relative min-h-screen flex items-center justify-center text-white p-4 overflow-hidden">
+    <section
+      id="how-it-was-made"
+      className="relative min-h-screen flex items-center justify-center text-white p-4 overflow-hidden"
+    >
       <div className="absolute inset-0 z-0 h-full w-full">
         <PixelBlast
           variant="circle"

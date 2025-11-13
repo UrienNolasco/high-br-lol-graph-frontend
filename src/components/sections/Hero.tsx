@@ -10,7 +10,7 @@ const Hero = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center text-white p-4 overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 h-full w-full">
+      <div className="absolute inset-0 z-0 h-full w-full pointer-events-auto">
         <PixelBlast
           variant="circle"
           pixelSize={6}
@@ -42,7 +42,7 @@ const Hero = () => {
           BR.
         </p>
         {/* Componente Interativo "Matchup Finder" - Será desenvolvido depois */}
-        <Card>
+        <Card className="pointer-events-auto">
           <CardTitle>
             Encontre os melhores matchups para seu campeão favorito!
           </CardTitle>

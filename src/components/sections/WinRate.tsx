@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
 import PixelBlast from "../bits/PixelBlast";
 
 const WinRate = () => {
   return (
-    <section id="winrate" className="relative min-h-screen flex flex-col items-center justify-center text-white p-4 overflow-hidden">
-      <div className="absolute inset-0 z-0 h-full w-full">
+    <section
+      id="winrate"
+      className="relative min-h-screen flex flex-col items-center justify-center text-white p-4 overflow-hidden"
+    >
+      <div className="absolute inset-0 z-0 h-full w-full pointer-events-auto">
         <PixelBlast
           variant="circle"
           pixelSize={6}
@@ -22,7 +25,9 @@ const WinRate = () => {
         />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full w-full pointer-events-none">
-        <h2 className="text-4xl font-bold text-center mb-8">Taxa de Vitória Geral (High-Elo BR)</h2>
+        <h2 className="text-4xl font-bold text-center mb-8">
+          Taxa de Vitória Geral (High-Elo BR)
+        </h2>
         {/* Conteúdo da seção WinRate dos Campeões será desenvolvido depois */}
       </div>
     </section>
