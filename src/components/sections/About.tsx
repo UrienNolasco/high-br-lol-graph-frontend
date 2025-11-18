@@ -1,32 +1,22 @@
-import React from "react";
-import PixelBlast from "../bits/PixelBlast";
+import PsychedelicSpiral from "../ui/shadcn-io/psychedelic-spiral";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center text-white p-4 overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 h-full w-full pointer-events-auto">
-        <PixelBlast
-          variant="circle"
-          pixelSize={6}
-          color="#C41C1C"
-          patternScale={3}
-          patternDensity={1.2}
-          pixelSizeJitter={0.5}
-          enableRipples
-          rippleSpeed={0.4}
-          rippleThickness={0.12}
-          rippleIntensityScale={1.5}
-          speed={0.6}
-          edgeFade={0.25}
-          transparent
-        />
-      </div>
-      <div className="relative z-10 flex items-center justify-center h-full w-full pointer-events-none">
-        <h2 className="text-4xl font-bold">O que é? (Em breve)</h2>
-        {/* Conteúdo da seção "O que é?" será desenvolvido depois */}
+      <PsychedelicSpiral
+        className="absolute inset-0"
+        color1="#F2994A"
+        color2="#F2C94C"
+        spinSpeed={5}
+      />
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 pointer-events-none">
+        <h2 className="text-5xl font-bold text-white drop-shadow-lg">
+          O que é?
+        </h2>
+        <p className="text-xl text-white/80 mt-4">Em breve</p>
       </div>
     </section>
   );

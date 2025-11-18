@@ -1,54 +1,45 @@
-import React from "react";
-import PixelBlast from "../bits/PixelBlast";
-import { Card, CardContent, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import DecryptedText from "../bits/DecryptedText";
+import PsychedelicSpiral from "../ui/shadcn-io/psychedelic-spiral";
+import { StaggeredMenu } from "../StaggeredMenu";
 
 const Hero = () => {
+  const menuItems = [
+    { label: "O que é?", ariaLabel: "O que é?", link: "/" },
+    { label: "WinRates", ariaLabel: "WinRates", link: "/winrates" },
+    { label: "Matchups", ariaLabel: "Matchups", link: "/matchups" },
+    { label: "Como eu fiz?", ariaLabel: "Como eu fiz?", link: "/como-eu-fiz" },
+  ];
+
+  const socialItems = [
+    { label: "Twitter", link: "https://twitter.com" },
+    { label: "GitHub", link: "https://github.com" },
+    { label: "LinkedIn", link: "https://linkedin.com" },
+  ];
+
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center text-white p-4 overflow-hidden"
-    >
-      <div className="absolute inset-0 z-0 h-full w-full pointer-events-auto">
-        <PixelBlast
-          variant="circle"
-          pixelSize={6}
-          color="#C41C1C"
-          patternScale={3}
-          patternDensity={1.2}
-          pixelSizeJitter={0.5}
-          enableRipples
-          rippleSpeed={0.4}
-          rippleThickness={0.12}
-          rippleIntensityScale={1.5}
-          speed={0.6}
-          edgeFade={0.25}
-          transparent
-        />
-      </div>
-      <div className="relative z-10 flex flex-col items-center justify-center h-full w-full">
-        <DecryptedText
-          text="Customize me"
-          speed={100}
-          maxIterations={20}
-          characters="ABCD1234!?"
-          className="revealed"
-          parentClassName="all-letters pointer-events-auto"
-          encryptedClassName="encrypted"
-        />
-        <p className=" text-center mb-8 select-none max-w-3xl font-thin text-2xl">
-          Análise de Win Rates e Matchups de Mestre, Grão-Mestre e Desafiante do
-          BR.
-        </p>
-        {/* Componente Interativo "Matchup Finder" - Será desenvolvido depois */}
-        <Card className="pointer-events-auto">
-          <CardTitle>
-            Encontre os melhores matchups para seu campeão favorito!
-          </CardTitle>
-          <CardContent>AAAAAAAAAAAAAAAAAAAAAAAAA</CardContent>
-          <Button className="mt-4 pointer-events-auto">Buscar Matchups</Button>
-        </Card>
+    <section id="hero" className="relative w-full min-h-screen overflow-hidden">
+      <PsychedelicSpiral className="absolute inset-0" />
+      <StaggeredMenu
+        isFixed={true}
+        position="right"
+        items={menuItems}
+        socialItems={socialItems}
+        displaySocials={true}
+        displayItemNumbering={true}
+        menuButtonColor="#fff"
+        openMenuButtonColor="#000"
+        changeMenuColorOnOpen={true}
+        colors={["#B19EEF", "#5227FF"]}
+        accentColor="#ff6b6b"
+        onMenuOpen={() => console.log("Menu opened")}
+        onMenuClose={() => console.log("Menu closed")}
+      />
+      <div className="relative z-10 flex flex-col justify-start min-h-screen px-8 pt-32 md:pt-48">
+        <h1 className="font-bold text-7xl text-white leading-tight mb-3 drop-shadow-lg">
+          API OPENSOURCE DO HIGH ELO BRASILEIRO <br /> DE LEAGUE OF LEGENDS
+        </h1>
+        <h2 className="text-4xl text-white/90 font-medium tracking-wide drop-shadow-md">
+          DESENVOLVIDO POR URIEN NOLASCO
+        </h2>
       </div>
     </section>
   );
