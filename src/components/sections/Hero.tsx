@@ -3,10 +3,14 @@ import { StaggeredMenu } from "../StaggeredMenu";
 
 const Hero = () => {
   const menuItems = [
-    { label: "O que é?", ariaLabel: "O que é?", link: "/" },
-    { label: "WinRates", ariaLabel: "WinRates", link: "/winrates" },
-    { label: "Matchups", ariaLabel: "Matchups", link: "/matchups" },
-    { label: "Como eu fiz?", ariaLabel: "Como eu fiz?", link: "/como-eu-fiz" },
+    { label: "O que é?", ariaLabel: "O que é?", link: "#about" },
+    { label: "WinRates", ariaLabel: "WinRates", link: "#winrate" },
+    { label: "Matchups", ariaLabel: "Matchups", link: "#matchups" },
+    {
+      label: "Como eu fiz?",
+      ariaLabel: "Como eu fiz?",
+      link: "#how-it-was-made",
+    },
   ];
 
   const socialItems = [
