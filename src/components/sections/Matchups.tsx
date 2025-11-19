@@ -1,3 +1,4 @@
+import MatchupsComponent from "../matchups-component";
 import PsychedelicSpiral from "../ui/shadcn-io/psychedelic-spiral";
 
 const Matchups = () => {
@@ -12,11 +13,8 @@ const Matchups = () => {
         color2="#8E2DE2"
         spinSpeed={8}
       />
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8 pointer-events-none">
-        <h2 className="text-5xl font-bold text-white drop-shadow-lg">
-          Matchups
-        </h2>
-        <p className="text-xl text-white/80 mt-4">Em breve</p>
+      <div className="relative z-10 flex justify-center items-center min-h-screen px-8">
+        <MatchupsComponent />
       </div>
     </section>
   );
